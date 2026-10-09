@@ -57,3 +57,9 @@ It will generate simulated RNA-seq count data, run DE analysis and produce volca
 R 4.6.1，RStudio
 依赖包：DESeq2, dplyr, ggplot2, pheatmap, EnhancedVolcano
 
+## 结果解读
+1. **差异基因**：基于校正后P值<0.05、|log2FoldChange|>1筛选肿瘤与正常样本间的差异表达基因；log2FC>1代表基因在肿瘤中上调，log2FC<-1代表下调。
+2. **火山图**：横坐标为表达变化倍数(log2FC)，纵坐标为校正P值。红点代表显著差异基因，直观展示上调、下调基因分布。
+3. **热图**：对筛选得到的差异基因表达量做归一化聚类，可以看出肿瘤组和正常组样本能够明显分开，差异基因具有分组特异性。
+4. **GO富集气泡图**：展示差异基因富集到的生物学功能条目；气泡大小代表富集到该条目的基因数量，颜色越偏向紫色代表富集显著性越高。
+5. **KEGG富集气泡图**：展示差异基因富集的信号通路。本结果中PI3K-Akt、MAPK等肿瘤经典通路显著富集，符合乳腺癌的分子特征。
