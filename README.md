@@ -24,3 +24,9 @@ It will generate simulated RNA-seq count data, run DE analysis and produce volca
 ## DEG threshold
 - Adjusted p-value (padj) < 0.05
 - |log2FoldChange| > 1
+## Results
+### Volcano Plot
+![Volcano Plot](volcano.png)
+
+### Heatmap
+![Heatmap](heatmap.png)
